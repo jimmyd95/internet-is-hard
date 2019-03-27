@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Speaker Submission</title>
+    <link rel="stylesheet" href="styles.css">
+  <head>
+    <body>
+      <header class="speaker-form-header">
+        <h1>Speaker Submission</h1>
+        <p><em>This is a practice code regarding different text panels</em></p>
+      </header>
+      <form class="speaker-form" action="" method="get">
+        <!-- acction attribute defines the URL that process the form
+         it's basically when the user hit submit, the submit URL
+          potentially a backend URL web server (data processor) -->
+        <!-- method attribute: post || get. defines how to form is submitted
+         to the backend. post is when you're changing the data on server, get
+          is when you are only getting the data -->
+        <!-- If we leave the action attribute blank. It submits to the same
+         URL. With get only, we can inspect the contents of the form -->
+        <!-- NAME -->
+        <div class="form-row">
+          <label for="full-name">Name</label> <!-- form labels have to match
+           with id attribute <input/> -->
+           <!-- <input/> will change the apperence due to the type of the
+            attribute, but it's always a user input -->
+          <input id="full-name" type="text" name="full-name"
+           placeholder="Jimmy Ding"/>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email"
+           placeholder="xxx@gmail.com"/>
+        </div>
+
+        <!-- RADIO BUTTONS -->
+        <fieldset class="legacy-form-row"> <!-- using a .legacy-form-row class
+         allows you to apply floats to the attribute because atm <fieldset>
+          does not accept flexbox -->
+          <legend>Type of Talk</legend>
+          <input type="radio" name="talk-type" value="main-stage"
+           id="talk-type-1" /> <!-- you can't enter custom value to radio
+              button. each one of them requires an explicit value (name too)
+               attribute -->
+          <label for="talk-type-1" class="radio-label">Main Stage</label>
+          <input type="radio" name="talk-type" value="workshop"
+           id="talk-type-2" checked/> <!-- checked is a boolean. if it's on a
+            radio/check box, it will show a selecet by default -->
+          <label for="talk-type-2" class="radio-label">Workshop</label>
+        </fieldset>
+
+        <!-- DROPDOWN SELECT MENU -->
+        <div class="form-row"> <!-- <select> is like <input/> -->
+          <label for="t-shirt">T-Shirt Size</label>
+          <select id="t-shirt" name="t-shirt"> <!-- name and value will be
+             passed down to the backend server (from selected options), but
+              it's placed at select -->
+            <option value="xs">Extra Small</option>
+            <option value="s">Small</option>
+            <option value="m">Medium</option>
+            <option value="l">Large</option>
+          </select>
+        </div>
+
+        <!-- TEXT -->
+        <div class="form-row">
+          <label for="abstract">Abstract</label>
+          <textarea id="abstract" name="abstract"
+            placeholder="500 words"></textarea>
+          <!-- if adding default text, it's inside not at value attribute -->
+          <div class="instructions">
+            Describe your talk in 500 words or less
+          </div>
+        </div>
+
+        <!-- CHECKBOX -->
+        <div class="form-row">
+          <label for="available" class="checkbox-label">
+            <!-- This is legal, and it works with the checkbox style -->
+          <input id="available" type="checkbox" name="available"
+           value="is-available">
+          <span>The date I'm available</span>
+          <!-- By wraping like this, the CSS width:auto will wrap everything on
+           a single line -->
+          </label>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <div class="form-row">
+          <button>Submit</button>
+        </div>
+        <!-- Because we had a class, everything will go to backend (or the URL).
+          ? represents the variables in our form. input attribute is
+           represented after the equal sign. & seperates the values -->
+
+           <!-- <input type='text'/>
+                <input type='email'/>
+                <input type='radio'/>
+                <select> and <option>
+                <textarea>
+                <input type='checkbox'/>
+                <button>
+              all of them can be used for website visitors -->
+
+      </form>
+    </body>
+  </head>
