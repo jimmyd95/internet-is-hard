@@ -1,0 +1,86 @@
+*{
+  /*this resets the default box behavior*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page{
+  width: 900px;
+  margin: 0 auto;
+  border: 2px solid red;
+  overflow: hidden; /* this makes the float count as a layer */
+  /*make floats into the height element so the backgrounds can show*/
+  background-color: #eaedf0;
+}
+
+.container{
+  overflow: hidden; /* if we don't apply this line, the background color would
+   not be visible due to zero height*/
+  background-color: #eaedf0;
+}
+
+.menu {
+  height: 100px;
+  background-color: #B2D6FF;    /* Medium blue */
+}
+
+.sidebar {
+  float: left;
+  width: 200px;
+  height: 300px;
+  background-color: #F09A9D;  /* Red */
+}
+
+.content {
+  float: left; /* this way you can make the normal looking webpage */
+  width: 650px;
+  height: 500px;
+  background-color: #F5CF8E;    /* Yellow */
+  padding: 20px;
+}
+
+.article-image{
+  float: left;
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+p{
+  margin-bottom: 20px;
+}
+
+.footer {
+  overflow: hidden;
+  /*clear: both; /* clears the float setting so it displays "normally" */*/
+  height: 200px;
+  background-color: #D6E9FE;    /* Light blue */
+}
+
+.column{ /* not necessarily the best name, footer-item would be nicer*/
+  float: left;
+  width: 31%;
+  margin: 20px 1.15%;
+  height: 160px;
+  background-color: #b2d6ff; /* Medium blue */
+}
+
+.avatar{
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 25px;
+  border-radius: 40px;
+  background-color: #d6e9fe;
+}
+
+.username{
+  margin-top: 30px;
+}
+
+.comment{
+  margin: 10px;
+  overflow: hidden; /*if without this, text would go fit the border*/
+}
