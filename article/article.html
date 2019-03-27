@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <title>Semantic HTML</title>
+  </head>
+  <body>
+    <div class="page"> <!-- <div> is still the best tool for stylising -->
+      <header> <!-- a thing on the head, logo, author info, etc -->
+        <h1>Interenting is Easy!</h1>
+        <nav> <!-- nav bar is basically for any group of links -->
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Sign Up</a></li>
+          </ul>
+        <!-- Trying to distinguish between the importance and the order -->
+        </nav> <!-- just like <article> you can create many nav bars -->
+      </header>
+
+      <article>
+      <!-- This way the serach engine will have a better time to navigate -->
+      <!-- If it's a blog post, or twitter like webpage. It's perfectly legal to
+        have multiple <article>s -->
+      <!-- article needs to make sense: work with flipboard, search engines, and
+       other websites. <section> doesn't -->
+        <header> <!-- bascially a more stylised <div> -->
+          <h1>Semantic HTML</h1>
+          <p>By Troy McClure. Published <time datetime="2017-1-3 15:00-0800">
+            January 3rd </time><!-- wraping a time into it allows the user to
+              see the "time" as they please. the format is from largest period
+              to smallest: year-month-date-time(24hr)-timezone --></p>
+        </header>
+        <aside class="advert"> <!-- this is essentially where you place ads -->
+          <img src="some-advert-image.png">
+        </aside> <!-- it's pretty good at highlighting definitions, stats, or
+           quotations. If it looks different than the rest of the article, it
+           might be <aside> -->
+        <p>This is an example web page explaining HTML5 semantic markup.</p>
+
+        <section>
+        <!-- This way it can be easily identified and it is more descriptive -->
+          <h2>The Document Outline</h2>
+          <p>HTML5 includes several “sectioning content” elements that
+             affect the document outline.</p>
+
+          <figure> <!-- a figure: diagram, illustration, code snippet, etc -->
+            <img src='semantic-elements.png' alt='Diagram showing <article>,
+               <section>, and <nav> elements'/>
+            <figcaption>New HTML5 semantic elements</figcaption>
+            <!-- caption of <figure> -->
+            <!-- <alt> serves as a text replacement of the image. <figcaption>
+             is essentially the description of the image via text or image -->
+            <!-- <figcaption> be seen easier than the invisible <alt> -->
+          </figure>
+
+          <h3>Headers</h3>
+          <p>The <code>&lt;header&gt;</code> element is one such sectioning
+             element.</p>
+
+          <h3>Footers</h3>
+          <p>And so is the <code>&lt;footer&gt;</code> element.</p>
+        </section>
+
+
+        <section>
+        <!-- this can create a nice hook for CSS styles (certain color for
+         certain section) -->
+          <h2>Inline Semantic HTML</h2><!-- if you moved the heading outside the
+             section, it goes nuts -->
+          <!-- although h6 is the lowest among the headings, if with section,
+           it can be independent from the rest of the pages -->
+          <p>The <code>&lt;time&gt;</code> element is semantic, but it’s not
+             sectioning content.</p>
+        </section> <!-- only use section to a more descriptive wrapper, use the
+           self-contained content for <article> -->
+        <footer> <!-- footer is basically header that's at the bottom -->
+          <p> This fake article was written by somebody at InternetingIsHard.com,
+             which is a pretty decent place to learn how to become a web
+             developer.  This footer is only for the containing
+             <code>&lt;article&gt;</code> element. </p>
+          <address><!-- address is basically "contatc us" -->
+            Please contact <a href='mailto:troymcclure@example.com'>Troy
+             McClure</a> for questions about this article.
+          </address>
+        </footer>
+      </article>
+
+      <aside class='sidebar'> <!-- if it is outside <article> it can be used as a
+         site-wide sidebar -->
+        <h2>Sidebar</h2>
+        <p>Some sidebar content</p>
+        <nav>
+          <h3>HTML &amp; CSS Tutorial</h3>
+          <ul>
+            <li><a href='#'>Introduction</a></li>
+            <li><a href='#'>Basic Web Pages</a></li>
+            <li><a href='#'>etc...</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <h3>JavaScript Tutorial</h3>
+          <ul>
+            <li><a href='#'>Introduction</a></li>
+            <li><a href='#'>Hello, JavaScript</a></li>
+            <li><a href='#'>etc...</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <footer>
+        <p>&copy; 2017 InternetingIsHard.com</p>
+      </footer>
+      <!-- The whole "paragraph" is a tree graph that's listing all the
+       hierachy of different Headers -->
+    </div> <!-- auto margin and whatnot. flexbox requires <div>. sementics are
+     for good navigations, if in doubt however, use <div> -->
+  </body>
+
+  <!-- note, some old (legacy) broswers might not recognize the semantic format.
+    It would be a good idea to call display:block on the global CSS
+    stylesheet. It will make new semantic elements behave like <div> -->
+    <!--
+    section, article, aside, footer, header, nav {
+      display: block;
+    }
+    -->
+</html>
