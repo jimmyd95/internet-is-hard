@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'/>
+    <title>CSS Selectors</title>
+    <link rel='stylesheet' href='styles.css'/>
+  </head>
+  <body>
+    <div class='page'>
+      <h1>CSS Selectors</h1>
+
+      <p class="synopsis">CSS selectors let you <em>select</em> individual HTML elements
+        in an HTML documents. This is <strong>super</strong> useful.</p>
+
+      <p>Classes are ridiculously importnat, since they allow you to select
+        arbitrary boxes in your web pages.</p>
+
+      <p>We'll also be talking about links in this example, so here's
+        <a href='https://internetingishard.com'>Intereneting Is Hard</a> for us
+        to style.</p>
+
+      <a class="button" href='nowhere.html'>Button One</a>
+      <!-- when using <a> instead of <div> it auto matically changed the
+      element inside because <a> has default settings of it's own -->
+      <a id="button-2" class="button call-to-action" href='nowhere.html'>Second Button</a>
+      <!-- you can add other markups, and is seperated by a space -->
+      <!-- if you have id selector, you are restricted with that one
+       element -->
+       <!-- ID attributes are also fragments, it can be considered as a part
+        of URL -->
+
+      <a href='#button-2'>Go to Button Two</a>
+      <!-- same page as button-2 -->
+      <a href='selectors.html#button-2'>Go to Button Two</a>
+      <!-- no longer the same page -->
+
+      <h2>Basic link Styles</h2>
+      <ul>
+        <li>link - link never visited</li>
+        <li>visited - link visited</li>
+        <li>hover - link been hovered</li>
+        <li><a href='https://internetingishard.com'>active</a> - link been clicked</li>
+      </ul>
+      <div class='sidebar'>
+        <p>If this page had a sidebar...</p>
+        <!-- since we had the first-of-type on every <p>, this "sidebar" would
+         be grey as well, which is not good -->
+      </div>
+    </div>
+  </body>
+</html>
