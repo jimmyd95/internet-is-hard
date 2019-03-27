@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+     <!-- maximum-scale=1.0" /> <!-- If you want to set a mobile or tablet
+        device, you need to use this -->
+    <title>Responsive Design</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <div class='page'>
+      <!-- The menu bar -->
+      <div class='section menu'></div>
+      <!-- the nothing... yet -->
+      <div class='section header'>
+        <div class="photo">
+          <picture>
+          <!-- 1x 2x is better srcset. <picture> is when you're badass-->
+          <!-- <picture is manual control of the image sizes -->
+            <source media="(min-width: 401px)" srcset='images/photo-big.jpg'>
+              <!-- media defines when the image should be loaded -->
+            <source media="(max-width: 400px)" srcset="images/photo-tall.jpg">
+            <img src="images/photo-small.jpg"> <!-- this is to a fall back -->
+          </picture>
+          <!-- <img src='images/photo-small.jpg'
+           srcset='images/photo-big.jpg 2000w, images/photo-small.jpg 1000w'
+           sizes='(min-width: 960px) 960px, 100vw'/>
+           <! 2000w and 1000w is telling the pics size in physical width. 'w'
+            is the unit only used in image optimization scenario -->
+           <!-- then sizes='...' will set the rendering size and the width of
+             the screen: if it's 960px, large, if it's 100vw, small -->
+           <!-- vw == viewport width (screen width) -->
+        </div>
+      </div>
+      <!-- the computer screen image -->
+      <div class='section content'>
+        <div class="illustration">
+          <img src='illustration-small.png'
+           srcset='images/illustration-small.png 1x,
+           images/illustration-big.png 2x' style="max-width: 500px"/>
+        </div>
+      </div>
+      <!-- word sign up -->
+      <div class='section sign-up'>
+        <img src='images/sign-up.svg'/>
+      </div>
+      <!-- block 1 -->
+      <div class='section feature-1'>
+        <img src='images/feature.svg'/>
+      </div>
+      <!-- block 2 -->
+      <div class='section feature-2'>
+        <img src='images/feature.svg'/>
+      </div>
+      <!-- block 3 -->
+      <div class='section feature-3'>
+        <img src='images/feature.svg'/>
+      </div>
+    </div>
+  </body>
+</html>
