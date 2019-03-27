@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 1200px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.example{
+  display: flex;
+  justify-content: space-around;
+  /* flex-start squeezes everything together and forces an absolute positioning
+   not very useful unless everything is absolutly positioned */
+  width: 800px;
+  margin: 50px 0;
+  background-color: #d6e9fe;
+}
+
+.item img{
+  dispaly: block;
+}
+
+.item-relative{
+/* relative position is defined via the offset of the adjacent items */
+/* a bit like margin, but instead you "push" the items to it's location */
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+
+.absolute{
+  /* this way, the absolute positioning will follow a certain item, not the
+   browser window */
+  position: relative;
+}
+
+.item-absolute{
+/* absolute positioning is offsetting the entire browser winder instead of the
+ adjacent items */
+ position: absolute;
+ top: 10px;
+ left: 10px;
+}
+
+.item-fixed{
+  /* fixed position is like absolute positioning, expect it doesn't move with
+   the scroll */
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

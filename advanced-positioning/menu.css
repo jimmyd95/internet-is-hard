@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 1200px;
+  font-size: 18px;
+  font-family:sans-serif;
+  color: #5d6063;
+}
+
+a:link,
+a:visited{
+  color: #5d6063;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.header{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 50px;
+  background: #d6e9fe;
+}
+
+.menu{
+  margin-top: 15px;
+}
+
+.menu > li{
+  /* this allows the list to go inline instead of flexbos */
+  display: inline;
+  margin-right: 30px;
+}
+
+.menu > li:last-of-type{
+  /* arragne the list in last of type order??? I don't know what this does */
+  /* this makes a margin between items and set the last one in order as well */
+  margin-right: 0;
+}
+
+.dropdown:hover .features-menu{ /* adding the .dropdown:hover, it will only
+   appear when user hovers the mouse over the feature item */
+  display: flex; /* making it a flex box */
+  flex-direction: column; /* drop down */
+  background: #b2d6ff;
+  border-radius: 5px;
+  padding-top: 60px;
+
+  position: absolute; /* this forces the submenue to be "invisible" so the
+   menu would function properly */
+  top: -25px;
+  left: -30px;
+}
+
+.features-menu{
+  display: none; /* this way it hides the submenu when not hovered */
+}
+
+.dropdown{
+  position: relative;  /* this allows the submenu to locate at the relative
+   position "feature" menu */
+}
+
+.dropdown > span{
+  z-index: 2; /* z-index basically makes the items into a 3D looking layout,
+   and the dropdown menu is going to be greater than the feature label in
+   <span> */
+  position: relative; /* makes the position related to the feature. only
+   positioned elements listen to z-line */
+  cursor: pointer; /* hover effect to display each items as a link */
+}
+
+.features-menu li{
+  list-style: none; /* clear out the style */
+  border-top: 1px solid #fff;
+
+  padding: 18px 40px 10px 20px;
+  margin: 10px;
+}
+
+.features-menu li:last-of-type{
+  /* make sure the last one is inline and the gap bettween the items */
+  border-bottom: none;
+}
