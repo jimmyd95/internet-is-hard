@@ -1,0 +1,118 @@
+
+/*starter*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-container{
+  display: flex; /*If this was introduced, browser would ignore the flexbox
+   properties. Writing this makes menu-container a flex box*/
+  justify-content: center; /*This aligns the itmes (horizontally).*/
+  /*This is the same as margin: 0 auto*/
+  color: #fff; /* White */
+  background-color: #5995DA; /* Blue */
+  padding: 20px 0;
+}
+
+.menu{
+  border: 1px solid #fff; /* for layout purposes */
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links{
+  /*border: 1px solid #fff;*/
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login{
+  margin-left: 20px;
+}
+
+.signup{
+  margin-left: auto;
+  /* this does the same thing as a nested HTML group. visually pleasing on
+   HTML */
+}
+
+.header-container{
+  color: #5995DA;
+  background-color: #D6E9FE;
+  display: flex;
+  justify-content: center;
+}
+
+.header{
+  align-items: center;
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social,
+.logo,
+.subscribe {
+  border: 1px solid #5995DA;
+}
+
+.social,
+.subscribe {
+  align-self: flex-end; /* I don't know what baseline does */
+  margin-bottom: 20px;
+}
+
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  /* if you used flex-direction, it basically rotated the positions. Hence the
+   align-items and justify-content are flipped */
+}
+
+.first-item{
+  order: 1;
+}
+
+.last-item{
+  order: -1;
+}
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item{
+  border: 1px solid #fff;
+  background-color: #d6e9fe;
+  height: 200px;
+  flex: 1; /* this stretch and shrink the flex boxes */
+}
+
+.footer-one,
+.footer-three{
+  background-color: #5995da;
+  flex: initial;
+  /* since the flex-box is flex number based, the larger the number, the bigger
+   the item */
+   width: 300px;
+}
