@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- above is what the browsers try to find when they are displaying
+our web page -->
+
+<!-- web page needs to be inside the <html> everything inside is called
+an 'element' </html> -->
+<html> <!-- opening tag -->
+  <head>
+    <!-- page title, any CSS (links)stylesheets and anything (abstract) that
+    renders the page and hidden away from the user are inside the head -->
+    <title> Basic Internet Learning </title>
+      <!-- <title > shows what you can search for (browser tag page display) -->
+      <!-- Don't overlap tags-->
+  </head>
+  <body>
+    <!-- headings, paragraphs, things that you can see on the web page
+    (HTML markup will be here) -->
+    <h1> Basic Internet Learning </h1>
+      <!-- This is where the title links to the "head title" -> h1 -->
+    <p> I am currently relearning all the HTML, CSS, and Javascript</p>
+      <!-- Don't fuck up the indention. Atom > Preferences > Editor
+      (Indention type) -->
+    <h2> Lists </h2>
+    <p> I am slowing proceeding towards chap 2 </p>
+
+    <p> There are unorganized list </p>
+    <ul>
+    <!-- unorganized list will be <ul> -->
+      <li> thing </li>
+      <!-- The list will be added via <li> -->
+      <li> <p> This is allowed, but "p li /li p" is not </p> </li>
+      <!-- <li> is the only tag that can appear in <ul>, you can cover other tags
+      inside <li>, but that's it -->
+      <!-- When in doubt, search for “MDN <some-element>” -->
+    </ul>
+
+    <p> And obivously there will be an organized list </p>
+    <ol>
+      <li> another thing </li>
+      <!-- same principle, only li can live in ol, but other tags can be
+      covered by li -->
+    </ol>
+
+    <h2> Emphasis </h2>
+    <!-- There are "block-level elements" (flow content) and
+    "inline (phrasing) elements" -->
+    <p> This is <em>(and this is inline elements)</em> block-level element </p>
+    <p> And there are other Emphasis like <strong> THIS </strong> </p>
+    <p> Or, you can do something like <em><strong>THIS</strong></em> </p>
+    <!-- Noted <em> is the bigger emphasis than <strong> -->
+
+    <h2> Empty elements </h2>
+    <p> Regards,
+      Jimmy</p>
+    <!-- Even though there is a break in the coding, there is none in the
+    web page. This is so it doesn't screw up the indention -->
+    <p> Adding a "br" makes this (and enter break) <br/>
+      into this </p>
+    <p> And the "hr" makes a line break <hr/> seems pretty cool <p>
+    <!-- usually it's better not to have <hr> inside a paragraph -->
+    <!-- <br> and <hr> is no different than <br/> and <hr/> -->
+    <p> does this work? </br> maybe? <hr/> maybe not? <p>
+    <!-- </br> works too, but not </hr> -->
+    <!-- If in doubt, find "HTML elements reference" -->
+  </body>
+</html> <!-- closing tag -->
