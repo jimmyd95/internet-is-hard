@@ -1,0 +1,57 @@
+/* body is the "selector" */
+body{
+  /*color is the "property", #FF0000 is the value*/
+  color: #414141;
+  /*#FF0000 means red*/
+  background-color: #EEEEEE
+  font-size: 18px;
+  /*priority of stylesheet goes:
+  browser default --> user-defined --> external --> page-specific --> inline*/
+}
+
+h1 {
+  font-size: 3em;
+  /*two type of unit is px and em*/
+}
+
+h2{
+  font-size: 1.6em;
+  /*em is a unit that scale according to the pixel*/
+  /*I guess em just scales from pixel after the entire thing has been set*/
+  /*em could mean 'how many times bigger'. It allows the page to scale
+   accordingly*/
+}
+
+h1, h2, h3, h4{
+  font-family: "Helvetica", "Arial", sans-serif;
+  /*Instead of creating a shit ton of same code, you can stack them up*/
+  /*font-family allows you to pick whichever font you can, and it goes from
+   left to right. In here, it's Helvetica, Arial, then default*/
+  font-weight: normal;
+  /*font-weight determines the boldness, and the font-style decided if it's
+  italic, which made HTML and CSS a bit different (em, strong)*/
+  /*don't do this in CSS em{} || strong{}*/
+}
+
+ul{
+  list-style-type: square;
+  /*if you can call it, you can edit it. Just like ul and ol*/
+}
+
+ol{
+  list-style-type: lower-greek;
+  /*and since ul and ol are having different style type, I need to write
+  two similar codes*/
+}
+
+a{
+  text-decoration: none;
+  /*you can also have line-through*/
+  /*however, these visual desplay of certain sentence or words are better
+  displayed via HTML. <ins> and <del> is easier to find than "line-through"*/
+}
+
+p{
+  text-align: justify;
+  /*justify, right, center*/
+}
