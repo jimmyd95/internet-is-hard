@@ -1,0 +1,82 @@
+/*block box includes the entirety of the webpage, inline only concludes
+the paragraphs and such. <h1>, <p> are block-level element, <em> and <strong>
+are inline elements*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*since every webpage has their default setting style, it's better to just
+  reset it in CSS selector*/
+}
+
+h1, p{
+  background-color: #DDE0E3; /* light gray */
+}
+
+h1{
+  padding: 50px;
+  border: 1px solid #5D6063; /* border goes: size style color */
+  border-bottom: 1px solid red; /* similar to padding, you can applying in
+   different directions */
+}
+
+p{
+  /*padding-top: 20px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;*/
+  /*padding can be used in any units. em also works */
+  padding: 20px 0 10px 10px;
+  /*padding can also be applied like such. vertically and horizontally*/
+  /*padding: 20px 0 20px 10px;*/
+  /*or you can do it with top right bottom left style*/
+  margin-top: 25px;
+  /*margin will collapse together*/
+  margin-bottom: 50px;
+  /*the coding style goes just like padding*/
+  /*padding has a background, margin don't. Padding is included in the
+  click area, margins don't. Margins collapse vertically, paddings don't*/
+}
+
+em, strong{
+  background-color: #B2D6FF; /* light blue */
+  /*display: block; we can force the inline boxes into block elements via
+  display. Obviously not a good idea tho */
+  display: inline;
+}
+
+em{
+  padding: 50px;
+  /*padding expands all directions.*/
+}
+
+strong{
+  margin: 50px;
+  /*margin expand horizontally, but not vertically.*/
+}
+
+/*Content - media content in elements*/
+/*Padding - space between box and the border*/
+/*Border - line between the padding and margin*/
+/*Margin - space between boxes*/
+
+div{
+  color: #FFF;
+  background-color: #5995DA;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+  width: 200px; /* this can be changed via white-space and overflow*/
+  box-sizing: border-box; /*This auto align the content box*/
+  /*the width size might vary because of the border and padding*/
+  margin: 20px auto; /* set it vertically and horizontally */
+}
+/*the difference between <div> and <span> is block-level and inline content*/
+
+body{
+  text-align: center;
+  /*This allows the text to be aligned alone. <div> ist not effected*/
+}
