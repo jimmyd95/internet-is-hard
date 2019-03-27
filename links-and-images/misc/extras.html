@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Extras</title>
+    <meta charset='UTF-8'/>
+    <!-- Character sets aren't related to the language of my documents -->
+  </head>
+  <body>
+    <h2> Parent folders (root-relative links) </h2>
+    <p> It is good for refering a file that's in the same folder or deeper
+    if the other way around. <a href='links.html'>link</a> and
+    <a href='images.html'>images</a>. They don't work. </p>
+
+    <p> In order to fix this, we need the ".." to refer back. Like in the CMD
+      <a href='../links.html'>link</a> and
+      <a href='../images.html'>images</a>. Now they work</p>
+    <!-- ".." goes up, and "/" goes down -->
+    <!-- root-relative links are usually better at refering to the same folder
+    and a level below, too many ".." and "/" is only going to make things more
+    confusing-->
+
+    <br/>
+    <h2> Character Sets </h2>
+    <p>You can use UTF-8 to count in Turkish:</p>
+
+    <ol>
+      <li>bir</li>
+      <li>iki</li>
+      <li>üç</li>
+      <li>dört</li>
+      <li>beş</li>
+    </ol>
+    <!-- It does display the "characters", but very weridly if without
+    <meta charset='UTF-8'/>-->
+
+    <br/>
+    <h2> HTML Entities </h2>
+    <p> It means that it is a character reserved inside HTML or you don't have
+    the keyboard for it. </p>
+    <!-- Characters such as "<"(beginning of the tag), ">"(end of the tag),
+    or "&"() -->
+    <p>There are three reserved characters in HTML: &lt; &gt; and &amp;. You
+      should always use HTML entities for these three characters.</p>
+    <!-- "&" ampersand and ";" semicolon. (&;) is a combo that allows HTML
+    entities displayable on the web page. lt == <, gt == >, amp == & -->
+
+    <p> Four different quotes &ldquo;:(opening double), &rdquo;:(closing double),
+       &lsquo;:(opening single), &rsquo;:(closing single) </p>
+    <p>If you&rsquo;re into &ldquo;web typography,&rdquo; you&rsquo;ll also find
+    yourself using curly quotes quite a bit.</p>
+
+    <br/>
+    <p> single UTF-8 is introduced, HTML entities are painly useful for
+      reserved characters or stright HTML code </p>
+  </body>
+</html>
